@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-label="Casque audio Bluetooth">
+  <defs>
+    <linearGradient id="hs-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbf1d3"/>
+      <stop offset="1" stop-color="#f5e2ad"/>
+    </linearGradient>
+    <linearGradient id="ear-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#123a3e"/>
+      <stop offset="1" stop-color="#0a2427"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#hs-bg)"/>
+
+  <!-- Arceau -->
+  <path d="M120 165 C120 95 160 55 200 55 C240 55 280 95 280 165"
+        fill="none" stroke="#0f5257" stroke-width="14" stroke-linecap="round"/>
+  <path d="M120 165 C120 95 160 55 200 55 C240 55 280 95 280 165"
+        fill="none" stroke="#12656b" stroke-width="6" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Oreillette gauche -->
+  <rect x="90" y="150" width="50" height="86" rx="22" fill="url(#ear-grad)"/>
+  <rect x="99" y="160" width="32" height="66" rx="16" fill="#1c5257"/>
+  <!-- Oreillette droite -->
+  <rect x="260" y="150" width="50" height="86" rx="22" fill="url(#ear-grad)"/>
+  <rect x="269" y="160" width="32" height="66" rx="16" fill="#1c5257"/>
+
+  <!-- Accent safran -->
+  <circle cx="115" cy="193" r="6" fill="#e9a820"/>
+  <circle cx="285" cy="193" r="6" fill="#e9a820"/>
+
+  <!-- Ondes sonores -->
+  <path d="M330 178 Q344 193 330 208" fill="none" stroke="#0f5257" stroke-width="5" stroke-linecap="round"/>
+  <path d="M344 168 Q366 193 344 218" fill="none" stroke="#0f5257" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+
+  <ellipse cx="200" cy="252" rx="110" ry="9" fill="#0a3b3f" opacity="0.1"/>
+</svg>
