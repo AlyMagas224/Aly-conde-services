@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mon compte — ALY &amp; CONDE Services</title>
+  <meta name="description" content="Connexion, historique des commandes et favoris.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Polices : Fraunces (titres, logo) et Hanken Grotesk (texte) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600;1,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="account">
+
+  <!-- En-tête et pied de page : dessinés par js/layout.js -->
+  <header class="site-header" id="site-header"></header>
+
+  <noscript>
+    <p class="container" style="padding-block:1rem">Ce site a besoin de JavaScript pour fonctionner. Veuillez l'activer dans votre navigateur.</p>
+  </noscript>
+
+  <main id="main">
+    <div class="container account-page">
+
+      <!-- Visiteur : connexion / inscription -->
+      <section id="auth-section" hidden aria-label="Connexion et inscription">
+        <div class="auth-card">
+          <div class="tabs" role="tablist" aria-label="Connexion ou inscription">
+            <button type="button" role="tab" id="tab-login" class="tab active" aria-selected="true" aria-controls="form-login">Connexion</button>
+            <button type="button" role="tab" id="tab-signup" class="tab" aria-selected="false" aria-controls="form-signup">Créer un compte</button>
+          </div>
+
+          <form id="form-login" novalidate>
+            <p class="auth-intro">Connectez-vous pour commander et retrouver vos commandes et favoris.</p>
+            <div class="field">
+              <label for="login-email">Courriel</label>
+              <input type="email" id="login-email" autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="login-password">Mot de passe</label>
+              <input type="password" id="login-password" autocomplete="current-password">
+            </div>
+            <p class="form-message" id="login-message" role="alert"></p>
+            <button type="submit" class="btn btn-primary btn-block">Se connecter</button>
+          </form>
+
+          <form id="form-signup" hidden novalidate>
+            <div class="field">
+              <label for="signup-name">Nom complet</label>
+              <input type="text" id="signup-name" autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="signup-email">Courriel</label>
+              <input type="email" id="signup-email" autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="signup-password">Mot de passe</label>
+              <input type="password" id="signup-password" autocomplete="new-password">
+              <small>6 caractères minimum</small>
+            </div>
+            <div class="field">
+              <label for="signup-confirm">Confirmer le mot de passe</label>
+              <input type="password" id="signup-confirm" autocomplete="new-password">
+            </div>
+            <p class="form-message" id="signup-message" role="alert"></p>
+            <button type="submit" class="btn btn-primary btn-block">Créer mon compte</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Client connecté -->
+      <section id="dashboard" hidden aria-label="Mon compte">
+        <header class="dash-head">
+          <div>
+            <h1 id="dash-name"></h1>
+            <p id="dash-email"></p>
+          </div>
+          <button type="button" class="btn" id="btn-logout">Se déconnecter</button>
+        </header>
+
+        <div class="tabs" role="tablist" aria-label="Sections du compte">
+          <button type="button" role="tab" id="tab-orders" class="tab active" aria-selected="true" aria-controls="panel-orders">Mes commandes</button>
+          <button type="button" role="tab" id="tab-favorites" class="tab" aria-selected="false" aria-controls="panel-favorites">Mes favoris</button>
+        </div>
+
+        <div id="panel-orders" role="tabpanel"></div>
+
+        <div id="panel-favorites" role="tabpanel" hidden>
+          <div class="empty-state" id="favorites-empty" hidden>
+            <h2>Aucun favori pour l'instant</h2>
+            <p>Cliquez sur le cœur d'un article pour le retrouver ici.</p>
+            <a class="btn btn-primary" href="boutique.html">Voir la boutique</a>
+          </div>
+          <div class="product-grid" id="favorites-grid"></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+  <!-- Scripts communs, puis script propre à la page -->
+  <script src="js/config.js"></script>
+  <script src="js/catalogue.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/pricing.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/pages/account.js"></script>
+</body>
+</html>
