@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Commande — ALY &amp; CONDE Services</title>
+  <meta name="description" content="Finalisez votre commande.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Polices : Fraunces (titres, logo) et Hanken Grotesk (texte) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600;1,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="checkout">
+
+  <!-- En-tête et pied de page : dessinés par js/layout.js -->
+  <header class="site-header" id="site-header"></header>
+
+  <noscript>
+    <p class="container" style="padding-block:1rem">Ce site a besoin de JavaScript pour fonctionner. Veuillez l'activer dans votre navigateur.</p>
+  </noscript>
+
+  <main id="main">
+    <section class="page-head container">
+      <h1>Commande</h1>
+      <p>Une dernière étape : vos coordonnées et le mode de paiement.</p>
+    </section>
+
+    <div class="container checkout-layout" id="checkout-layout">
+      <form class="checkout-form" id="checkout-form" novalidate>
+
+        <fieldset>
+          <legend>Vos coordonnées</legend>
+          <div class="field-row">
+            <div class="field">
+              <label for="fullName">Nom complet</label>
+              <input type="text" id="fullName" autocomplete="name" aria-describedby="err-fullName">
+              <p class="field-error" id="err-fullName"></p>
+            </div>
+            <div class="field">
+              <label for="email">Courriel</label>
+              <input type="email" id="email" autocomplete="email" aria-describedby="err-email">
+              <p class="field-error" id="err-email"></p>
+            </div>
+          </div>
+          <div class="field">
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone" autocomplete="tel" placeholder="418 555-0142" aria-describedby="err-phone">
+            <p class="field-error" id="err-phone"></p>
+          </div>
+        </fieldset>
+
+        <fieldset id="address-group">
+          <legend>Adresse de livraison</legend>
+          <p class="checkout-note">Livraison au Québec seulement.</p>
+          <div class="field">
+            <label for="street">Adresse</label>
+            <input type="text" id="street" autocomplete="street-address" aria-describedby="err-street">
+            <p class="field-error" id="err-street"></p>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="city">Ville</label>
+              <input type="text" id="city" autocomplete="address-level2" aria-describedby="err-city">
+              <p class="field-error" id="err-city"></p>
+            </div>
+            <div class="field">
+              <label for="postal">Code postal</label>
+              <input type="text" id="postal" autocomplete="postal-code" placeholder="G7H 2B1" maxlength="7" aria-describedby="err-postal">
+              <p class="field-error" id="err-postal"></p>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Paiement</legend>
+          <label class="radio-card">
+            <input type="radio" name="payment" value="livraison" checked>
+            <div><strong>À la livraison ou au rendez-vous</strong><span>Vous payez à la réception de votre commande.</span></div>
+          </label>
+          <label class="radio-card">
+            <input type="radio" name="payment" value="interac">
+            <div><strong>Virement Interac</strong><span>Les instructions vous sont envoyées par courriel.</span></div>
+          </label>
+        </fieldset>
+
+        <p class="form-error" id="form-error" role="alert"></p>
+        <button type="submit" class="btn btn-accent btn-large" id="place-order">Confirmer la commande</button>
+      </form>
+
+      <aside class="summary" id="checkout-summary" aria-label="Récapitulatif de la commande"></aside>
+    </div>
+
+    <div class="container" id="confirmation" hidden></div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+ 
