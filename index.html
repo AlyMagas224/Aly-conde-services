@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ALY &amp; CONDE Services — Matériel informatique et services</title>
+  <meta name="description" content="ALY &amp; CONDE Services : matériel informatique, accessoires et services numériques en ligne.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Polices : Fraunces (titres, logo) et Hanken Grotesk (texte) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600;1,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="home">
+
+  <!-- En-tête et pied de page : dessinés par js/layout.js -->
+  <header class="site-header" id="site-header"></header>
+
+  <noscript>
+    <p class="container" style="padding-block:1rem">Ce site a besoin de JavaScript pour fonctionner. Veuillez l'activer dans votre navigateur.</p>
+  </noscript>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 id="hero-title">Matériel informatique &amp; services, au même endroit.</h1>
+          <p>Ordinateurs, accessoires et services numériques pour les particuliers et les petites entreprises. Commandez en ligne, nous nous occupons du reste.</p>
+          <div class="hero-actions">
+            <a class="btn btn-accent btn-large" href="boutique.html">Voir la boutique</a>
+            <a class="btn btn-outline-light btn-large" href="boutique.html?cat=services">Découvrir nos services</a>
+          </div>
+        </div>
+        <span class="hero-amp" aria-hidden="true">&amp;</span>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="cat-title">
+      <div class="section-head"><h2 id="cat-title">Parcourir par catégorie</h2></div>
+      <div class="category-grid">
+        <a class="category-card" href="boutique.html?cat=ordinateurs">
+          <span class="category-emoji" aria-hidden="true">💻</span>
+          <h3>Ordinateurs et écrans</h3>
+          <p>Portables, écrans et tablettes pour le travail et les études.</p>
+          <span class="category-count" data-count-for="ordinateurs"></span>
+        </a>
+        <a class="category-card" href="boutique.html?cat=accessoires">
+          <span class="category-emoji" aria-hidden="true">🎧</span>
+          <h3>Accessoires</h3>
+          <p>Claviers, casques, stockage, chargeurs et sacs.</p>
+          <span class="category-count" data-count-for="accessoires"></span>
+        </a>
+        <a class="category-card" href="boutique.html?cat=services">
+          <span class="category-emoji" aria-hidden="true">🛠️</span>
+          <h3>Services</h3>
+          <p>Installation, dépannage, création de site et formation.</p>
+          <span class="category-count" data-count-for="services"></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section container" style="padding-top:0" aria-labelledby="featured-title">
+      <div class="section-head">
+        <h2 id="featured-title">À la une</h2>
+        <a href="boutique.html">Voir toute la boutique</a>
+      </div>
+      <div class="product-grid" id="featured-grid"></div>
+    </section>
+
+    <section class="promo-band" aria-label="Offre de bienvenue">
+      <div class="container">
+        <p><strong>Première commande ?</strong> Entrez le code <code>BIENVENUE10</code> au panier : 10&nbsp;% de rabais.</p>
+        <a class="btn btn-primary" href="boutique.html">Commencer mes achats</a>
+      </div>
+    </section>
+
+    <section class="section container" aria-label="Nos engagements">
+      <div class="info-strip">
+        <div class="info-item">
+          <h3>Livraison offerte dès 100&nbsp;$</h3>
+          <p>Sur tous les produits, après rabais. Aucuns frais de livraison pour les services.</p>
+        </div>
+        <div class="info-item">
+          <h3>Services sur rendez-vous</h3>
+          <p>Installation, dépannage, création de site : nous fixons avec vous une date qui convient.</p>
+        </div>
+        <div class="info-item">
+          <h3>Une équipe à votre écoute</h3>
+          <p>Une question avant d'acheter ? Écrivez-nous, nous répondons par courriel.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+</body>
+</html>
