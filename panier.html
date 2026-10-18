@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panier — ALY &amp; CONDE Services</title>
+  <meta name="description" content="Vérifiez votre panier, appliquez un code promotionnel et passez à la commande.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Polices : Fraunces (titres, logo) et Hanken Grotesk (texte) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600;1,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="cart">
+
+  <!-- En-tête et pied de page : dessinés par js/layout.js -->
+  <header class="site-header" id="site-header"></header>
+
+  <noscript>
+    <p class="container" style="padding-block:1rem">Ce site a besoin de JavaScript pour fonctionner. Veuillez l'activer dans votre navigateur.</p>
+  </noscript>
+
+  <main id="main">
+    <section class="page-head container">
+      <h1>Votre panier</h1>
+    </section>
+
+    <div class="container">
+      <div id="cart-empty" hidden></div>
+      <div class="cart-layout" id="cart-layout">
+        <section id="cart-lines" aria-label="Articles du panier"></section>
+        <aside class="summary" id="cart-summary" aria-label="Récapitulatif"></aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+  
+</body>
+</html>
