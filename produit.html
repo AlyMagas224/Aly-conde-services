@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Article — ALY &amp; CONDE Services</title>
+  <meta name="description" content="Détails de l'article, prix et disponibilité.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Polices : Fraunces (titres, logo) et Hanken Grotesk (texte) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600;1,9..144,700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="product">
+
+  <!-- En-tête et pied de page : dessinés par js/layout.js -->
+  <header class="site-header" id="site-header"></header>
+
+  <noscript>
+    <p class="container" style="padding-block:1rem">Ce site a besoin de JavaScript pour fonctionner. Veuillez l'activer dans votre navigateur.</p>
+  </noscript>
+
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="index.html">Accueil</a><span aria-hidden="true">/</span>
+        <a id="crumb-category" href="boutique.html">Boutique</a><span aria-hidden="true">/</span>
+        <span id="crumb-name" aria-current="page"></span>
+      </nav>
+
+      <div class="product-detail" id="product-detail"></div>
+
+      <section class="similar" id="similar-section" hidden aria-labelledby="similar-title">
+        <h2 id="similar-title">Dans la même catégorie</h2>
+        <div class="product-grid" id="similar-grid"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="site-footer"></footer>
+
+ 
