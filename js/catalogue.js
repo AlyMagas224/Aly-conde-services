@@ -1,11 +1,4 @@
-/**
- * catalogue.js — Données du catalogue (mode démonstration) : catégories,
- * produits et codes promotionnels.
- *
- * ⚠️ Ce fichier est généré à partir des mêmes données que sql/schema.sql.
- * Pour modifier un prix ou un stock en mode Supabase, modifiez la table
- * « products » (Table Editor). Ce fichier ne sert alors plus que de secours.
- *
+/*
  * Champs d'un produit :
  *   id, name, description, details[], category, kind ("produit" | "service"),
  *   price (en dollars), stock (nombre, ou null pour un service),
