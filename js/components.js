@@ -27,6 +27,13 @@
       img.src = product.image;
       img.alt = product.name;
       img.loading = 'lazy';
+      // Photo introuvable : on affiche l'emoji au lieu d'une icône d'image cassée
+      img.addEventListener('error', () => {
+        img.remove();
+        const fallback = el('span', 'visual-emoji', product.emoji || '📦');
+        fallback.setAttribute('aria-hidden', 'true');
+        box.append(fallback);
+      }, { once: true });
       box.append(img);
     } else {
       const emoji = el('span', 'visual-emoji', product.emoji || '📦');
