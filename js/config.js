@@ -24,8 +24,8 @@ window.MCS_CONFIG = {
   },
 
   /* ----- Supabase (laisser vide = mode démonstration) ----- */
-  SUPABASE_URL: '',
-  SUPABASE_ANON_KEY: '',
+  SUPABASE_URL: 'https://brrggmepxavuxoxontqq.supabase.co',
+  SUPABASE_ANON_KEY: 'sb_publishable_ogRmnRwNbUV5T5KgDwkmwg_RiIdDz5_',
 
   /* ----- Prix, livraison et taxes (doivent correspondre à sql/schema.sql) ----- */
   CURRENCY: 'CAD',
