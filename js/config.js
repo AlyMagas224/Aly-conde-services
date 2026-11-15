@@ -17,7 +17,7 @@ window.MCS_CONFIG = {
   /* ----- Coordonnées de l'entreprise (affichées dans le pied de page et la page Contact) ----- */
   COMPANY: {
     name: 'ALY & CONDE Services',
-    email: 'alymagas96@gmail.com',
+    email: 'alymagass96@gmail.com',
     phone: '(438) 341-4489',
     address: 'Québec, Canada',             // à remplacer
     hours: 'Lundi au vendredi, 9 h à 17 h',
