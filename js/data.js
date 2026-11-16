@@ -1,7 +1,4 @@
 /**
- * data.js — Couche d'accès aux données. Le reste du site ne sait jamais d'où
- * viennent les données : il appelle MCS.data.xxx() et c'est ce fichier qui
- * choisit entre deux « adaptateurs » :
  *
  *   • local    : tout est enregistré dans le navigateur (localStorage).
  *                Utilisé quand SUPABASE_URL / SUPABASE_ANON_KEY sont vides.
@@ -235,10 +232,23 @@
 
   const cents = (dollars) => Math.round(Number(dollars) * 100);
 
+  /**
+   * Adresse d'une photo de produit. Si CONFIG.STORAGE_BUCKET est renseigné, la photo
+   * est servie par Supabase Storage (bucket public) à partir de son nom de fichier ;
+   * une adresse complète (http…) est conservée telle quelle.
+   */
+  function imageUrl(path) {
+    if (!path) return path;
+    if (/^https?:\/\//i.test(path)) return path;
+    if (!CONFIG.STORAGE_BUCKET || !CONFIG.SUPABASE_URL) return path;
+    const file = path.split('/').pop();
+    return `${CONFIG.SUPABASE_URL.replace(/\/+$/, '')}/storage/v1/object/public/${CONFIG.STORAGE_BUCKET}/${encodeURIComponent(file)}`;
+  }
+
   const normalizeProduct = (p) => ({
     id: p.id, name: p.name, description: p.description, details: p.details || [],
     category: p.category, kind: p.kind, price: Number(p.price), stock: p.stock,
-    emoji: p.emoji, color: p.color, image: p.image, featured: p.featured,
+    emoji: p.emoji, color: p.color, image: imageUrl(p.image), featured: p.featured,
   });
 
   const remote = {
