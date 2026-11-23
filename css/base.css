@@ -1,13 +1,4 @@
-/* =============================================================================
- * base.css — Fondations : variables, réinitialisation, typographie, mise en
- *            page générale, boutons, formulaires, en-tête et pied de page.
- *
- * Identité « ALY & CONDE » : deux fondateurs, une esperluette. Le « & »
- * en italique safran est l'élément signature du site (logo, page d'accueil).
- * Le reste reste sobre : vert-bleu profond, safran pour l'action principale.
- * ========================================================================== */
 
-/* ----------------------------- Variables ----------------------------- */
 :root {
   --ink: #10222b;            /* texte */
   --muted: #55666b;          /* texte secondaire */
